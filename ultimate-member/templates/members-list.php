@@ -13,6 +13,7 @@ $unique_hash = substr( md5( $args['form_id'] ), 10, 5 ); ?>
 						{{{user.account_status_name}}}
 					</span>
 					<div class="um-member-card-container">
+						<!---
 						<?php if ( $profile_photo ) { ?>
 							<div class="um-member-photo radius-<?php echo esc_attr( UM()->options()->get( 'profile_photocorner' ) ); ?>">
 								<a href="{{{user.profile_url}}}" title="{{{user.display_name}}}">
@@ -22,10 +23,22 @@ $unique_hash = substr( md5( $args['form_id'] ), 10, 5 ); ?>
 								</a>
 							</div>
 						<?php } ?>
-
+							--->
 						<div class="um-member-card <?php echo ! $profile_photo ? 'no-photo' : '' ?>">
 							<div class="um-member-card-content">
 								<div class="um-member-card-header">
+								<!-- added -->
+								<?php if ( $profile_photo ) { ?>
+								<div class="um-member-photo radius-<?php echo esc_attr( UM()->options()->get( 'profile_photocorner' ) ); ?>">
+									<a href="{{{user.profile_url}}}" title="{{{user.display_name}}}">
+										{{{user.avatar}}}
+
+										<?php do_action( 'um_members_list_in_profile_photo_tmpl', $args ); ?>
+									</a>
+								</div>
+								<?php } ?>
+								<!-- add end -->
+							
 									<?php if ( $show_name ) { ?>
 										<div class="um-member-name">
 											<a href="{{{user.profile_url}}}" title="{{{user.display_name}}}">
@@ -103,7 +116,12 @@ $unique_hash = substr( md5( $args['form_id'] ), 10, 5 ); ?>
 							</div>
 
 							<div class="um-member-card-actions">
-
+								<!-- added -->
+								<a href="{{{user.profile_url}}}">
+								<button class="um-member-more-button">
+									詳しくみる
+								</button></a>
+								<!-- add end -->
 								<# if ( Object.keys( user.dropdown_actions ).length > 0 ) { #>
 									<div class="um-member-cog">
 										<a href="javascript:void(0);" class="um-member-actions-a">

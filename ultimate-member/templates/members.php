@@ -207,6 +207,7 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 	<div class="um-members-overlay"><div class="um-ajax-loading"></div></div>
 
 	<div class="um-member-directory-header um-form">
+		<img src="<?php echo plugin_dir_url(__FILE__ ) ?>assets/ban.JPG">
 
 		<?php do_action( 'um_members_directory_before_head', $args, $form_id ); ?>
 

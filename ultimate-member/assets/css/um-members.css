@@ -584,6 +584,7 @@ body #content .um-directory a {
               height: 32px;
               line-height: 32px; }
       .um-directory .um-members-wrapper .um-members.um-members-list {
+        /*
         display: grid;
         grid-template-rows: auto 1fr;
         grid-template-columns: repeat(1, 1fr);
@@ -593,8 +594,17 @@ body #content .um-directory a {
         -ms-grid-template-columns: repeat(1, 1fr);
         -ms-grid-gap: 10px;
         -ms-grid-auto-rows: minmax(max-content, auto);
-        align-items: center; }
+        align-items: center; 
+        */
+        display: flex;  
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        width: 70%;
+        max-width: 620px;
+        margin: 0 auto;
+      }
         .um-directory .um-members-wrapper .um-members.um-members-list .um-member {
+          /*
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
@@ -606,7 +616,21 @@ body #content .um-directory a {
           background: #fff;
           box-sizing: border-box;
           -moz-box-sizing: border-box;
-          -webkit-box-sizing: border-box; }
+          -webkit-box-sizing: border-box; 
+          */
+
+          display: flex;
+          flex-direction: column;
+          width: calc(50% - 48px);
+          margin: 12px 0;
+          border-radius: 10px;
+          border-color: rgba(16, 11, 2, 0.12);
+          padding: 24px;
+          position: relative;
+        }
+        .um-directory .um-members-wrapper .um-members.um-members-list .um-member:nth-child(even) {
+          margin-left: 24px;
+        }
           .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-status {
             display: none;
             background: #999; }
@@ -624,36 +648,52 @@ body #content .um-directory a {
               background: #c74a4a; }
           .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container {
             display: flex;
+            /*
             flex-direction: row;
+            */
+            flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
             flex-wrap: nowrap;
             width: 100%;
-            margin: 0 0 10px 0;
+            /* margin: 0 0 10px 0; */
             padding: 0; }
             .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container .um-member-photo {
-              width: 100px;
+              /* width: 100px; */
+              width: 50px;
+              height: 50px;
               margin: 0 15px 0 0;
               padding: 0; }
               .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container .um-member-photo a {
-                width: 100px;
-                height: 100px;
+                /* width: 100px; 
+                height: 100px; */
+                width: 100%;
+                height: 100%;
+
                 display: block; }
                 .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container .um-member-photo a img {
-                  width: 100px;
-                  height: 100px;
+                  /* width: 100px;
+                  height: 100px; */
+                  width: 100%;
+                  height: 100%;
+
                   position: relative;
                   top: 0;
                   margin: 0;
                   margin-bottom: 0;
                   border: none; }
             .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container .um-member-card {
-              display: flex;
+              /* display: flex;
               flex-direction: row;
               justify-content: flex-start;
               align-items: flex-start;
               flex-wrap: nowrap;
-              width: calc( 100% - 115px);
+              width: calc( 100% - 115px); */
+              /* added */
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              /* add end */
               padding: 0;
               margin: 0;
               box-sizing: border-box;
@@ -667,28 +707,96 @@ body #content .um-directory a {
                 justify-content: flex-start;
                 align-items: stretch;
                 flex-wrap: nowrap;
-                width: calc( 100% - 30px);
-                margin: 0 10px 0 0; }
+                /* width: calc( 100% - 30px);
+                margin: 0 10px 0 0; */}
                 .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container .um-member-card .um-member-card-content .um-member-card-header {
+                  /* added */
+                  display: flex;
+                  margin-bottom: 12px;
+                  align-items: center;
+                  /* add end */
                   width: 100%; }
                   .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container .um-member-card .um-member-card-content .um-member-card-header .um-member-name {
-                    margin: 0 0 4px 0; }
+                    /* margin: 0 0 4px 0; */}
                     .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container .um-member-card .um-member-card-content .um-member-card-header .um-member-name a {
-                      font-size: 16px;
+                      /* font-size: 16px; */
+                      font-size: 18px !important;
+
                       line-height: 26px;
                       color: #444;
                       font-weight: 700; }
                 .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container .um-member-card .um-member-card-content .um-member-tagline {
                   display: flex;
-                  flex-direction: row;
-                  justify-content: flex-start;
+                  /* flex-direction: row;
+                  justify-content: flex-start; 
                   align-items: baseline;
-                  flex-wrap: wrap;
+                  flex-wrap: wrap; */
                   width: 100%;
                   font-size: 13px;
-                  color: #999;
+                  /* color: #999; */
+                  color: rgba(16, 11, 2, 0.87);
+                  line-height: 1.7em;
+
                   padding: 0;
-                  box-sizing: border-box; }
+                  box-sizing: border-box; 
+                }
+                  /* styles for '...' */ 
+                  .um-member-tagline p {
+                    /* hide text if it more than N lines  */
+                    overflow: hidden;
+                    /* for set '...' in absolute position */
+                    position: relative; 
+                    /* use this value to count block height */
+                    line-height: 1.7em;
+                    /* max-height = line-height (1.2) * lines max number (3) */
+                    max-height: 8.5em; 
+                    /* fix problem when last visible word doesn't adjoin right side  */
+                    text-align: justify;  
+                    /* place for '...' */
+                    margin-right: -1em;
+                    padding-right: 1em;
+                  }
+                  /* create the ... */
+                  .um-member-tagline p:before {
+                    /* points in the end */
+                    content: '...';
+                    /* absolute position */
+                    position: absolute;
+                    /* set position to right bottom corner of block */
+                    right: 0;
+                    bottom: 0;
+                  }
+                  /* hide ... if we have text, which is less than or equal to max lines */
+                  .um-member-tagline p:after {
+                    /* points in the end */
+                    content: '';
+                    /* absolute position */
+                    position: absolute;
+                    /* set position to right bottom corner of text */
+                    right: 0;
+                    /* set width and height */
+                    width: 1em;
+                    height: 1em;
+                    margin-top: 0.7em;
+                    /* bg color = bg color under block */
+                    background: white;
+                  }
+                  .um-member-tagline p:not(:first-child) {
+                    display: none;
+                  }
+                  .um-member-more-button {
+                    background-color: #fff;
+                    color: rgba(255, 177, 43, 1);
+                    font-weight: bold;
+                    border: 1px solid;
+                    border-color: rgba(255, 177, 43, 1);
+                    border-radius: 500px;
+                    padding: 8px 24px;
+                  }
+                  .um-member-more-button:hover {
+                    background-color: rgba(255, 177, 43, 0.12);
+                  }
+                /* add end */
                 .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container .um-member-card .um-member-card-content .um-member-meta-main {
                   width: 100%;
                   padding: 0;
@@ -736,12 +844,18 @@ body #content .um-directory a {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                align-items: flex-end;
+                /* align-items: flex-end; */
+                align-items: center;
+                flex-grow: 1;
+
                 flex-wrap: nowrap;
-                width: 20px;
+                /* width: 20px; */
                 text-align: right;
                 padding: 0; }
                 .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container .um-member-card .um-member-card-actions .um-member-cog {
+                  /* added */
+                  display: none;
+                  /* add end */
                   position: relative; }
                   .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container .um-member-card .um-member-card-actions .um-member-cog .um-member-actions-a {
                     line-height: 1;
@@ -783,7 +897,11 @@ body #content .um-directory a {
                 margin: 0 10px 0 0; }
             .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-footer .um-member-card-reveal-buttons {
               width: 20px;
-              text-align: right; }
+              text-align: right; 
+              /* added */
+              display: none;
+              /* add end */
+            }
               .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-footer .um-member-card-reveal-buttons .um-member-more {
                 display: flex;
                 flex-direction: column;
