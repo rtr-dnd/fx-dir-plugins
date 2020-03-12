@@ -263,7 +263,7 @@ body #content .um-directory a {
     .um-directory .um-member-directory-header .um-member-directory-header-row .um-search {
       margin: 0;
       width: 100%;
-      display: grid;
+      /* display: grid;
       grid-template-rows: auto 1fr;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 10px;
@@ -272,14 +272,28 @@ body #content .um-directory a {
       -ms-grid-template-columns: repeat(3, 1fr);
       -ms-grid-gap: 10px;
       -ms-grid-auto-rows: minmax(max-content, auto);
-      align-items: center; }
+      align-items: center; */
+      display: flex;
+      width: 70%;
+      max-width: 620px;
+      margin: 0 auto;
+
+    }
       .um-directory .um-member-directory-header .um-member-directory-header-row .um-search .um-search-filter {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: baseline;
         flex-wrap: nowrap;
-        width: 100%; }
+        /* width: 100%; */
+        /* added */
+        width: calc(50% - 12px);
+        margin: 12px 0; }
+        .um-search-filter:nth-child(even) {
+          margin-left: 24px !important;
+        }
+        /* add end */
+        
         .um-directory .um-member-directory-header .um-member-directory-header-row .um-search .um-search-filter .select2-container {
           float: left;
           width: 100% !important; }
@@ -621,7 +635,7 @@ body #content .um-directory a {
 
           display: flex;
           flex-direction: column;
-          width: calc(50% - 48px);
+          width: calc(50% - 12px);
           margin: 12px 0;
           border-radius: 10px;
           border-color: rgba(16, 11, 2, 0.12);
@@ -712,7 +726,7 @@ body #content .um-directory a {
                 .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container .um-member-card .um-member-card-content .um-member-card-header {
                   /* added */
                   display: flex;
-                  margin-bottom: 12px;
+                  margin-bottom: 16px;
                   align-items: center;
                   /* add end */
                   width: 100%; }
@@ -792,9 +806,24 @@ body #content .um-directory a {
                     border-color: rgba(255, 177, 43, 1);
                     border-radius: 500px;
                     padding: 8px 24px;
+                    font-size: 12px;
+                    display: flex;
+                    align-items: center;
                   }
                   .um-member-more-button:hover {
                     background-color: rgba(255, 177, 43, 0.12);
+                  }
+                  .um-member-more-button > img {
+                    display: block !important;
+                    height: 12px;
+                    margin-right: 8px !important;
+                  }
+                  .um-member-more-button > span {
+                    display: block;
+                  }
+                  .select2-selection__placeholder {
+                    color: rgba(16, 11, 2, 0.12);
+                    font-size: 12px;
                   }
                 /* add end */
                 .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container .um-member-card .um-member-card-content .um-member-meta-main {

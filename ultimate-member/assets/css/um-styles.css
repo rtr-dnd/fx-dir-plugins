@@ -847,9 +847,9 @@ small.um-max-filesize span{
     font-size: 15px !important;
     text-align: left !important;
     text-decoration: none !important;
-    -moz-border-radius: 2px !important;
+    /* -moz-border-radius: 2px !important;
     -webkit-border-radius: 2px !important;
-    border-radius: 2px !important;
+    border-radius: 2px !important; */
     background-clip: padding-box !important;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -858,20 +858,29 @@ small.um-max-filesize span{
     user-select: none;
     background: none !important;
     background-color: #fff !important;
-    border: 1px solid #ddd !important;
+	/* border: 1px solid #ddd !important; */
+	border: 1px solid rgba(16, 11, 2, 0.12);
+	border-radius: 4px;
+
 }
 .select2.select2-container .select2-selection .select2-selection__arrow b[role=presentation]{
 	display:none;
 }
 .select2.select2-container .select2-selection .select2-selection__arrow:before{
-	content: "\f3d0" !important;
-    font-size: 27px !important;
-    font-family: "Ionicons" !important;
+	/* content: "\f3d0" !important; */
+	content: url('../../templates/assets/arrow-triangle-down.svg') !important;
+
+    /* font-size: 27px !important;
+    font-family: "Ionicons" !important; */
     width: 100% !important;
-    display: block;
+    /* display: block; 
     height: 100%;
     line-height: 35px;
-    color: #aaaaaa;
+	color: #aaaaaa; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 }
 .select2.select2-container .select2-selection .select2-selection__arrow {
     display: inline-block !important;

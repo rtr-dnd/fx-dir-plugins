@@ -119,7 +119,8 @@ $unique_hash = substr( md5( $args['form_id'] ), 10, 5 ); ?>
 								<!-- added -->
 								<a href="{{{user.profile_url}}}">
 								<button class="um-member-more-button">
-									詳しくみる
+									<img src="<?php echo plugin_dir_url(__FILE__ ) ?>/assets/arrow-left.svg" alt="">
+									<span>詳しくみる</span>
 								</button></a>
 								<!-- add end -->
 								<# if ( Object.keys( user.dropdown_actions ).length > 0 ) { #>
