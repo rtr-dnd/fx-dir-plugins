@@ -838,13 +838,15 @@ small.um-max-filesize span{
 .select2.select2-container .select2-selection{
     display: block !important;
     height: 40px;
-    padding: 0 0 0 12px !important;
+    /* padding: 0 0 0 12px !important; */
     overflow: hidden !important;
     position: relative !important;
     white-space: nowrap !important;
     line-height: 35px !important;
     color: #666 !important;
-    font-size: 15px !important;
+	/* font-size: 15px !important; */
+	font-size: 13px;
+
     text-align: left !important;
     text-decoration: none !important;
     /* -moz-border-radius: 2px !important;

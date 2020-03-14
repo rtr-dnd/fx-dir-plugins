@@ -346,7 +346,11 @@ body #content .um-directory a {
       justify-content: flex-start;
       align-items: baseline;
       flex-wrap: wrap;
-      margin: 0;
+      /*margin: 0; */
+      width: 70%;
+      max-width: 620px;
+      margin: 0 auto;
+
       padding: 0;
       box-sizing: border-box;
       border: none; }
@@ -821,10 +825,6 @@ body #content .um-directory a {
                   .um-member-more-button > span {
                     display: block;
                   }
-                  .select2-selection__placeholder {
-                    color: rgba(16, 11, 2, 0.12);
-                    font-size: 12px;
-                  }
                 /* add end */
                 .um-directory .um-members-wrapper .um-members.um-members-list .um-member .um-member-card-container .um-member-card .um-member-card-content .um-member-meta-main {
                   width: 100%;
@@ -986,16 +986,33 @@ body #content .um-directory a {
       font-size: 15px; }
       .um-directory .um-members-pagination-box .um-members-pagi .pagi {
         cursor: pointer;
-        display: inline-block;
-        width: auto;
+        /* display: inline-block;
+        width: auto; */
+        display: flex;
+        width: 34px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
         height: 34px;
         line-height: 34px;
         transition: all .2s linear;
         padding: 0 14px;
-        color: #666 !important;
+        /* color: #666 !important; */
+        color: rgba(255, 177, 43, 1);
+
         font-weight: normal; }
         .um-directory .um-members-pagination-box .um-members-pagi .pagi.pagi-arrow {
-          line-height: 38px; }
+          /* line-height: 38px; */
+          /* added */
+          padding: 0 48px; }
+        .um-members-pagi .pagi.pagi-arrow:last-child{
+          display: none;
+        }
+        .um-members-pagi .pagi.pagi-arrow:first-child{
+          display: none;
+        }
+          /* add end */
           .um-directory .um-members-pagination-box .um-members-pagi .pagi.pagi-arrow i:before {
             font-size: 20px;
             vertical-align: middle !important;
