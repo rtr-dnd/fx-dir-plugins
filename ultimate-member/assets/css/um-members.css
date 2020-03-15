@@ -279,6 +279,11 @@ body #content .um-directory a {
       margin: 0 auto;
 
     }
+    /* added */
+    @media screen and (max-width: 1025px) {
+      
+    }
+
       .um-directory .um-member-directory-header .um-member-directory-header-row .um-search .um-search-filter {
         display: flex;
         flex-direction: row;
